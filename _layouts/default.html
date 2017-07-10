@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html data-ts-native style="height:100vh;">
+	{% include head.html %}
+	<body>
+		<div>
+			<header class="ts fluid horizontally fitted heading slate top-header">
+			</header>
+			{% include navigation.html %}
+			<header class="ts huge fluid horizontally fitted padded heading left-align slate med-header">
+				<div class="ts narrow container">
+					<div class="ts grid">
+						<div class="thirteen wide column">
+							<div class="middle">
+								<span class="white header">
+									<i><b>BRASLab</b></i>
+								</span>
+								<span class="description">
+									語音訊號處理 / 深度學習 / 無線寬頻網路
+								</span>
+							</div>
+						</div>
+						<div class="three wide column">
+							<img style="width:100%;" src={{"/static/image/Untitled.png" | prepend: site.baseurl }}>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="ts narrow container" style="min-height:75vh;">
+				<div class="ts segment" style="min-height:75vh; height:100%;">
+					{{ content }}
+				</div>
+				<div class="ts relaxed stackable grid">
+				</div>
+			</div>
+			<footer class="ts med-header pdsm horizontally fitted fluid secondary segment">
+				<p class="white" align="center">CSS powered by TocasUI / CMS powered by Jekyll . 2017 Yuntech-BRASLab Copyright</p>
+			</footer>
+		</div>
+	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.2/tocas.js"></script>
+</html>

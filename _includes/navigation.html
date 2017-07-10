@@ -1,0 +1,26 @@
+{% for entry in site.data.navigation %}
+{% capture fullurl %}{{ site.baseurl }}{{ entry.url }}{% endcapture %}
+{% if fullurl == page.url %}
+{% assign current_page = fullurl %}
+{% break %}
+{% elsif page.url contains fullurl %}
+{% assign current_page = fullurl %}
+{% endif %}
+{% endfor %}
+
+<nav class="nav-color ts horizontally scrollable large fluid borderless pure basic menu">
+	<div class="ts narrow container">
+		{% for entry in site.data.navigation %}
+		{% if entry.url == current_page %}
+		{% assign current = ' active' %}
+		{% else %}
+		{% assign current = null %}
+		{% endif %}
+		<a class="item{{current}}" href="{{entry.url}}">{{entry.title}}</a>
+		{% endfor %}
+		<div class="right menu">
+			<a class="item" href="http://www.csie.yuntech.edu.tw/">資工系網</a>
+			<a class="item" href="http://www.yuntech.edu.tw/">雲科大首頁</a>
+		</div>
+	</div>
+</nav>

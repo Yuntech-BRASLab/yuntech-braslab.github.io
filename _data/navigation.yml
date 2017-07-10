@@ -1,0 +1,14 @@
+- title: 首頁
+  url: /
+
+- title: 關於Lab
+  url: /lab
+
+- title: 指導老師
+  url: /teacher
+
+- title: 研究團隊
+  url: /group
+
+- title: 聯絡我們
+  url: /contact

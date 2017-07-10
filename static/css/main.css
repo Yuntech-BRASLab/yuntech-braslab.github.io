@@ -1,0 +1,66 @@
+.nav-color{
+background-color: rgb(255,255,255) !important;
+}
+
+.ts.slate .image{
+position: static; !important;
+}
+
+.top-header{
+padding:5px !important;
+background-color: rgb(105, 105, 105)!important;
+}
+
+.med-header{
+padding:1em !important;
+background-color: rgb(105, 105, 105)!important;
+height:100%;
+}
+
+.white{
+color: rgb(220,220,220) !important;
+}
+
+.white .header {
+
+}
+
+.middle{
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.padded-top {
+padding-top:3em !important;
+}
+
+.full-width{
+width:100%;
+}
+.padd {
+padding:2em !important;
+}
+.nomg {
+margin:0em 0em 0em 0em !important;
+}
+.nopd {
+padding:0px !important;
+}
+.mgsub {
+margin:1em 0em 1.5em 0.1em !important;
+}
+.nomgsub {
+margin:0em 0em 0em 0.1em !important;
+}
+.pdsm {
+padding: 0.8em !important;
+}
+
+span.description {
+color: #FFFF99 !important;
+font-size: 1.25em !important;
+}
+
+.paddimg {
+padding-top: 1em;
+}

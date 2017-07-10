@@ -1,0 +1,64 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{ "/static/css/ideal-image-slider.css" | prepend: site.baseurl }}" type="text/css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="{{ "/static/css/ideal-image-slider-theme.css"  | prepend: site.baseurl }} " type="text/css" media="screen" title="no title" charset="utf-8">
+<br>
+<div class="ts relaxed stackable grid">
+	<div class="eleven wide column">
+		<div >
+			{% assign sorted_cats = site.categories | sort %}
+			{% for category in sorted_cats  %}
+			<h4 class="ts dividing header">{{ category | first }}</h4>
+			<div class="ts bulleted list">
+				{% for post in category.last %} 
+				<a class="item" href="{{ post.url }}">{{ post.title }} ({{ post.date | date:"%d/%m/%Y"}}) </a>
+				{% endfor %}
+			</div>
+			</ul> 
+			{% endfor %}
+		</div>
+	</div>
+
+	<div class="five wide column">
+		<div id="slider">
+			<img src="./static/image/side/1.jpg">
+			<img src="./static/image/side/2.jpg">
+			<img src="./static/image/side/3.jpg">
+			<img src="./static/image/side/4.jpg">
+		</div>
+
+		<div class="ts divider"></div>
+
+		<a class="ts negative card">
+			<div class="content">
+				<div class="header">Youtube 教學影片</div>
+				<div class="meta"><div>線上教學影片</div></div>
+				<div class="describle">點擊此按鈕以觀看</div>
+			</div>
+			<div class="symbol">
+				<i class="youtube icon"></i>
+			</div>
+		</a>
+		<div class="ts nomg divider"></div>
+		<a class="ts info card">
+			<div class="content">
+				<div class="header">研究室 GitHub</div>
+				<div class="meta"><div>研究室相關專案</div></div>
+				<div class="describle">Fork Our on GitHub</div>
+			</div>
+			<div class="symbol">
+				<i class="github icon"></i>
+			</div>
+		</a>
+	</div>
+</div>
+<script src="./static/js/ideal-image-slider.min.js"></script>
+<script>
+var slider = new IdealImageSlider.Slider({
+	selector: '#slider',
+	height: 200,
+	interval: 4000
+});
+slider.start();
+</script>

@@ -1,0 +1,21 @@
+{% for entry in site.data.group %}
+{% capture fullurl %}{{ site.baseurl }}{{ entry.url }}{% endcapture %}
+{% if fullurl == page.url %}
+{% assign current_page = fullurl %}
+{% break %}
+{% elsif page.url contains fullurl %}
+{% assign current_page = fullurl %}
+{% endif %}
+{% endfor %}
+
+<div class="ts top attached two item tabbed menu" style="padding-top:1em;">
+		{% for entry in site.data.group %}
+		{% if entry.url == current_page %}
+		{% assign current = 'active ' %}
+		{% else %}
+		<!-- We have to declare it 'null' to ensure it doesn't propagate. -->
+		{% assign current = null %}
+		{% endif %}
+		<a class="{{current}}item" href="{{entry.url}}">{{entry.title}}</a>
+		{% endfor %}
+</div>
